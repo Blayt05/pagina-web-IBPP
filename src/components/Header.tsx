@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { act, useState } from "react";
+import React, { useState } from "react";
 
 export default function Header() {
     const [opened,setOpened] = useState(false);
@@ -126,7 +126,7 @@ export default function Header() {
                                         href="#"
                                         onClick={() => setActiveMobile(link)}
                                         className={`block w-full rounded-lg px-6 py-2 text-lg font-semibold text-gray-700 transition
-                                            hover:bg-amber-100 hover:text-amber-600
+                                            hover:bg-amber-100 hover:text-amber-600 
                                             ${activeMobile === link ? "bg-amber-100 text-amber-700" : ""}                                            
                                         `}  
                                     >
