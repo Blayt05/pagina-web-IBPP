@@ -17,9 +17,10 @@ export default function Header() {
     
     const mobileLinks2 = [
         "Visitanos",
-        "Mira",
+        "Mirar",
         "Conecta",
-        "Crece"
+        "Crece",
+        "Sobre IBPP"
     ]
   
     return (
@@ -145,9 +146,10 @@ export default function Header() {
                 <nav className="flex justify-center">
                     <ul className="flex gap-8 p-2">
                         <li><a href="#" className="hover:text-amber-300">Visitanos</a></li>
-                        <li><a href="#" className="hover:text-amber-300">Mira</a></li>
+                        <li><a href="#" className="hover:text-amber-300">Mirar</a></li>
                         <li><a href="#" className="hover:text-amber-300">Conecta</a></li>
                         <li><a href="#" className="hover:text-amber-300">Crece</a></li>
+                        <li><a href="#" className="hover:text-amber-300">Sobre IBPP</a></li>
                     </ul>
                 </nav>
             </div>   
