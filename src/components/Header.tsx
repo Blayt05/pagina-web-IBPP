@@ -62,7 +62,7 @@ export default function Header() {
                 <div className="flex-1 lg:hidden"></div>
 
                 <button
-                    className={` flex  hamburger hamburger--spin ml-auto mr-4${opened ? " is-active" : ""}`}
+                    className={` flex justify-end  hamburger hamburger--spin ${opened ? " is-active" : ""}`}
                     type="button"
                     onClick={() => setOpened(!opened)}
                     aria-label="Menu"
