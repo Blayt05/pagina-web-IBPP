@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @import 'hamburgers/dist/hamburgers.css';
+@plugin "daisyui";
+@plugin "flyonui";
 
 :root {
   --background: #ffffff;
