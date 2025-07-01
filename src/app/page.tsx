@@ -1,5 +1,6 @@
 "use client"
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useRef } from "react";
 
 export default function Home() {
@@ -263,13 +264,14 @@ export default function Home() {
             Possimus ratione nostrum quasi quas.</p>
           
           <div className="flex justify-center items-center pt-5">
-            <a>Lee Mas</a>
-            <Image
-              src="images/arrow-forward.svg"
-              alt="Imagen de Flecha"
-              width={50}
-              height={50}
-            />
+            <Link href="/sobre-nosotros" className="underline hover:text-amber-200 transition-colors flex" >Lee Mas
+              <Image
+                src="images/arrow-forward.svg"
+                alt="Imagen de Flecha"
+                width={40}
+                height={50}
+              />
+            </Link>
         </div>
       </div>
       

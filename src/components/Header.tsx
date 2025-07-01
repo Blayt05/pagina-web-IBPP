@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
+import Link from "next/link";
 
 export default function Header() {
     const [opened,setOpened] = useState(false);
@@ -45,14 +46,14 @@ export default function Header() {
                 {/* Menu horizontal solo en desktop */}
                 <nav className="hidden lg:flex flex-1 justify-center items-center">
                     <ul className="flex gap-8 text-[#FFFFFF]">
-                        <li><a href="#" className="hover:text-amber-300">Inicio</a></li>
-                        <li><a href="#" className="hover:text-amber-300">Sobre Nosotros</a></li>
-                        <li><a href="#" className="hover:text-amber-300">Sermones</a></li>
-                        <li><a href="#" className="hover:text-amber-300">Blog</a></li>
+                        <li><Link href="/" className="hover:text-amber-300">Inicio</Link></li>
+                        <li><Link href="/sobre-nosotros" className="hover:text-amber-300">Sobre Nosotros</Link></li>
+                        <li><Link href="/sermones" className="hover:text-amber-300">Sermones</Link></li>
+                        <li><Link href="/blog" className="hover:text-amber-300">Blog</Link></li>
                         <li><a href="#" className="hover:text-amber-300">Tienda</a></li>
                         <li><a href="#" className="hover:text-amber-300">Inicio de Sesion</a></li>
                         <li>
-                            <a href="#" className="ml-8 text-[#000000] bg-[#FFD2A4] rounded-full px-5 py-3 hover:bg-[#816f5e] transition">
+                            <a href="/contactanos" className="ml-8 text-[#000000] bg-[#FFD2A4] rounded-full px-5 py-3 hover:bg-[#816f5e] transition">
                                 Contactanos
                             </a>
                         </li>
@@ -87,27 +88,52 @@ export default function Header() {
                 >
                     <nav>
                         <ul className="flex flex-col items-center gap-2 py-4">
-                            {mobileLinks.map(link => (
-                                <li key={link}>
-                                    <a
-                                        href="#"
-                                        onClick={() => setActiveMobile(link)}
-                                        className={`block w-full rounded-lg px-6 py-2 text-lg font-semibold text-gray-700 
-                                            hover:bg-amber-100 hover:text-amber-600
-                                            ${activeMobile === link ? "bg-amber-100 text-amber-700" : ""} 
-                                        `}
-                                    >
-                                        {link}
-                                    </a>
-                                </li>
-                            ))}
+                            {mobileLinks.map(link => {
+                                let href = "#";
+                                switch (link) {
+                                    case "Inicio":
+                                        href = "/";
+                                        break;
+                                    case "Sobre Nosotros":
+                                        href = "/sobre-nosotros";
+                                        break;
+                                    case "Sermones":
+                                        href = "/sermones";
+                                        break;
+                                    case "Blog":
+                                        href = "/blog";
+                                        break;
+                                    case "Tienda":
+                                        href = "/tienda";
+                                        break;
+                                    case "Inicio de Sesion":
+                                        href = "/login";
+                                        break;
+                                    default:
+                                        href = "#";
+                                }
+                                return (
+                                    <li key={link}>
+                                        <Link
+                                            href={href}
+                                            onClick={() => setActiveMobile(link)}
+                                            className={`block w-full rounded-lg px-6 py-2 text-lg font-semibold text-gray-700 
+                                                hover:bg-amber-100 hover:text-amber-600
+                                                ${activeMobile === link ? "bg-amber-100 text-amber-700" : ""} 
+                                            `}
+                                        >
+                                            {link}
+                                        </Link>
+                                    </li>
+                                );
+                            })}
                         </ul>
                         <hr className="my-2 border-gray-200" />
                         <ul className="flex flex-col items-center gap-2 py-2">
                             <li>
 
-                                <a 
-                                    href="#" 
+                                <Link 
+                                    href="/contactanos" 
                                     onClick={() => setActiveMobile("Contactanos")}
                                     className={`block w-full rounded-lg px-6 py-2 text-lg font-semibold transition
                                         ${activeMobile === "Contactanos"
@@ -116,27 +142,48 @@ export default function Header() {
                                     `} 
                                 >
                                     Contactanos
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                         <hr className="my-2 border-gray-200" />
                         <ul className="flex flex-col items-center gap-2 py-2">
-                            {mobileLinks2.map(link => (
-                                <li key={link}>
-                                    <a
-                                        href="#"
-                                        onClick={() => setActiveMobile(link)}
-                                        className={`block w-full rounded-lg px-6 py-2 text-lg font-semibold text-gray-700 transition
-                                            hover:bg-amber-100 hover:text-amber-600 
-                                            ${activeMobile === link ? "bg-amber-100 text-amber-700" : ""}                                            
-                                        `}  
-                                    >
-                                        {link}
-                                    </a>
-                                </li>
-                            ))}
-                            
-                        </ul>
+                            {mobileLinks2.map(link => {
+                                let href = "#";
+                                switch (link) {
+                                    case "Visitanos":
+                                        href = "/visitanos";
+                                        break;
+                                    case "Mirar":
+                                        href = "/mirar";
+                                        break;
+                                    case "Conecta":
+                                        href = "/conecta";
+                                        break;
+                                    case "Crece":
+                                        href = "/crece";
+                                        break;
+                                    case "Sobre IBPP":
+                                        href = "/sobreibpp";
+                                        break;
+                                    default:
+                                        href = "#";
+                                }
+                                return (
+                                    <li key={link}>
+                                        <Link
+                                            href={href}
+                                            onClick={() => setActiveMobile(link)}
+                                            className={`block w-full rounded-lg px-6 py-2 text-lg font-semibold text-gray-700 transition
+                                                hover:bg-amber-100 hover:text-amber-600 
+                                                ${activeMobile === link ? "bg-amber-100 text-amber-700" : ""}                                            
+                                            `}
+                                        >
+                                            {link}
+                                        </Link>
+                                    </li>
+                                );
+                            })}
+                            </ul>
                     </nav>
                 </div>
             )}        

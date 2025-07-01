@@ -11,8 +11,7 @@ export default function Footer() {
             title: "Mirar", 
             link: "/mirar", 
             links: [
-                { name: "Directos en vivo", href: "/mirar/directos" },
-                { name: "Videos pasados", href: "/mirar/videos" }
+                { name: "Directos en vivo", href: "/mirar/directosenvivo" },
             ]
         },
         {
@@ -20,7 +19,6 @@ export default function Footer() {
             link: "/visitanos", 
             links: [
                 { name: "Direcciones", href: "/visitanos/direcciones" },
-                { name: "Tiempos", href: "/visitanos/tiempos" }
         ]},
         {
             title: "Conecta", 
@@ -32,7 +30,7 @@ export default function Footer() {
             title: "Crece", 
             link: "/crece", 
             links: [
-                { name: "Sobre los niños", href: "/crece/sobrelosniños" },
+                { name: "Sobre los niños", href: "/crece/sobrelosninos" },
                 { name: "Femenil", href: "/crece/femenil" },
                 { name: "Varonil", href: "/crece/varonil" },
                 { name: "Jovenes", href: "/crece/jovenes" },
@@ -41,13 +39,13 @@ export default function Footer() {
         ]},
         {
             title: "Sobre IBPP", 
-            link: "/sobre", 
+            link: "/sobreibpp", 
             links: [
-                { name: "Nuestra Historia", href: "/sobre/nuestrahistoria" },
-                { name: "Contactanos", href: "/sobre/contactanos" },
-                { name: "Podcast", href: "/sobre/podcast" },
-                { name: "Politicas de Privacidad", href: "/sobre/politicasdeprivacidad" },
-                { name: "Terminos de Uso", href: "/sobre/terminosdeuso" }
+                { name: "Nuestra Historia", href: "/sobreibpp/nuestrahistoria" },
+                { name: "Contactanos", href: "/contactanos" },
+                { name: "Podcast", href: "/sobreibpp/podcast" },
+                { name: "Politicas de Privacidad", href: "/sobreibpp/politicasdeprivacidad" },
+                { name: "Terminos de Uso", href: "/sobreibpp/terminosdeuso" }
         ]}
     ];
 
