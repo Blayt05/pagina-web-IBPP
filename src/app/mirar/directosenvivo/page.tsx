@@ -4,14 +4,25 @@ import { useEffect, useState } from "react";
 
 function getNextSundayAt11() {
     const now = new Date();
-    const next = new Date(now);
-    next.setDate(now.getDate() + ((7 - now.getDay()) % 7 || 7));
-    next.setHours(11, 0, 0, 0);
-    if (now.getDay() === 0 && now < next) {
-        // Hoy es domingo antes de las 11am
-        next.setDate(now.getDate());
+    const nextSunday = new Date(now);
+    // Calcula el próximo domingo
+    nextSunday.setDate(now.getDate() + ((7 - now.getDay()) % 7 || 7));
+    nextSunday.setHours(11, 0, 0, 0);
+
+    // Si hoy es domingo
+    if (now.getDay() === 0) {
+        const endOfLive = new Date(now);
+        endOfLive.setHours(13, 0, 0, 0); // 1:00 pm
+
+        if (now < endOfLive) {
+            // Antes de la 1pm, el próximo directo es hoy a las 11am
+            nextSunday.setDate(now.getDate());
+        } else {
+            // Después de la 1pm, el próximo directo es el siguiente domingo
+            nextSunday.setDate(now.getDate() + 7);
+        }
     }
-    return next;
+    return nextSunday;
 }
 
 function useCountdown(targetDate: Date) {
