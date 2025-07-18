@@ -512,39 +512,39 @@ export default function Home() {
 
       <div className="p-10">
         <h2 className="text-center font-bold text-4xl pb-10">Compartir, inspirar y innovar</h2>
-        <div className="lg:hidden">
-          <div
-            className="flex overflow-x-auto gap-4 snap-x snap-mandatory pb-4 scroll-smooth"
-            ref={carouselRef}
-            onScroll={handleScroll}
-            style={{ scrollSnapType: "x mandatory" }}
-          >
-            {slides.map((slide, idx) => (
-              <div
-                key={idx}
-                className="min-w-full md:min-w-[400px] max-w-md flex-shrink-0 snap-center w-full bg-amber-200 p-3 rounded-2xl"
-              >
-                <div className="bg-[#FFF5EB] border-[#FFD0A0] border-b-10 rounded-2xl p-5 h-full">
-                  <h2 className="font-bold text-xl pb-3">{slide.title}</h2>
-                  <p className="pb-5">{slide.text}</p>
-                  <p>{slide.author}</p>
-                  <p>{slide.date}</p>
-                </div>
+        
+        <div
+          className="flex overflow-x-auto gap-4 snap-x snap-mandatory pb-4 scroll-smooth"
+          ref={carouselRef}
+          onScroll={handleScroll}
+          style={{ scrollSnapType: "x mandatory" }}
+        >
+          {slides.map((slide, idx) => (
+            <div
+              key={idx}
+              className="min-w-full md:min-w-[400px] max-w-md flex-shrink-0 snap-center w-full bg-amber-200 p-3 rounded-2xl"
+            >
+              <div className="bg-[#FFF5EB] border-[#FFD0A0] border-b-10 rounded-2xl p-5 h-full">
+                <h2 className="font-bold text-xl pb-3">{slide.title}</h2>
+                <p className="pb-5">{slide.text}</p>
+                <p>{slide.author}</p>
+                <p>{slide.date}</p>
               </div>
-            ))}
-          </div>
-          {/* Dots */}
-          <div className="flex justify-center gap-2 mt-4">
-            {slides.map((_, idx) => (
-              <button
-                key={idx}
-                className={`w-3 h-3 rounded-full ${current === idx ? "bg-amber-500" : "bg-amber-200"} transition-colors`}
-                onClick={() => goToSlide(idx)}
-                aria-label={`Ir al slide ${idx + 1}`}
-              />
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
+        {/* Dots */}
+        <div className="flex justify-center gap-2 mt-4">
+          {slides.map((_, idx) => (
+            <button
+              key={idx}
+              className={`w-3 h-3 rounded-full ${current === idx ? "bg-amber-500" : "bg-amber-200"} transition-colors`}
+              onClick={() => goToSlide(idx)}
+              aria-label={`Ir al slide ${idx + 1}`}
+            />
+          ))}
+        </div>
+        
         
         {/* Desktop */}
         <div className=" hidden lg:carousel carousel-center rounded-box gap-5">
