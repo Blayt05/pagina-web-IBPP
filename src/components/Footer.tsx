@@ -34,7 +34,6 @@ export default function Footer() {
                 { name: "Femenil", href: "/crece/femenil" },
                 { name: "Varonil", href: "/crece/varonil" },
                 { name: "Jovenes", href: "/crece/jovenes" },
-                { name: "Jovenes adultos", href: "/crece/jovenesadultos" },
                 { name: "Clases y Eventos", href: "/crece/clasesyeventos" },
         ]},
         {
@@ -64,31 +63,35 @@ export default function Footer() {
                             height={100}
                         />
 
+                        
                         {/* Redes Sociales */}
-                        <div className="flex justify-center items-center gap-5 pt-5">
+                        <div className="flex justify-start items-center gap-5 pt-5">
                             
-                            <a className="p-3">
+                            <a href="https://www.facebook.com/IBPPMty" className="p-3  rounded-full bg-white/10 hover:bg-blue-600 transition-colors shadow-lg" target="_blank" rel="noopener noreferrer" aria-label="Facebook IBPP">
                                 <Image
                                     src="/images/Facebook.svg"
                                     alt="Logo de IBPP"
                                     width={40}
                                     height={40}
+                                    className="hover:scale-110 transition-transform"
                                 />
                             </a>
-                            <a className="p-3">
+                            <a href="https://www.instagram.com/ibppmty/" className="p-3 rounded-full bg-white/10 hover:bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500 transition-colors shadow-lg" target="_blank" rel="noopener noreferrer" aria-label="Instagram IBPP">
                                 <Image
                                     src="/images/Instagram.svg"
                                     alt="Logo de IBPP"
                                     width={40}
                                     height={40}
+                                    className="hover:scale-110 transition-transform"
                                 />
                             </a>
-                            <a className="p-3">
+                            <a href="https://www.youtube.com/@principedepazmty.1653" className="p-3 rounded-full bg-white/10 hover:bg-red-600 transition-colors shadow-lg" target="_blank" rel="noopener noreferrer" aria-label="YouTube IBPP">
                                 <Image
                                     src="/images/Youtube.svg"
                                     alt="Logo de IBPP"
                                     width={45}
                                     height={45}
+                                    className="hover:scale-110 transition-transform"
                                 />   
                             </a>      
                         </div>
@@ -152,28 +155,31 @@ export default function Footer() {
                         {/* Redes Sociales */}
                         <div className="flex justify-start items-center gap-5 pt-5">
                             
-                            <a className="p-3">
+                            <a href="https://www.facebook.com/IBPPMty" className="p-3  rounded-full bg-white/10 hover:bg-blue-600 transition-colors shadow-lg" target="_blank" rel="noopener noreferrer" aria-label="Facebook IBPP">
                                 <Image
                                     src="/images/Facebook.svg"
                                     alt="Logo de IBPP"
                                     width={50}
                                     height={50}
+                                    className="hover:scale-110 transition-transform"
                                 />
                             </a>
-                            <a className="p-3">
+                            <a href="https://www.instagram.com/ibppmty/" className="p-3 rounded-full bg-white/10 hover:bg-gradient-to-tr hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 transition-colors shadow-lg" target="_blank" rel="noopener noreferrer" aria-label="Instagram IBPP">
                                 <Image
                                     src="/images/Instagram.svg"
                                     alt="Logo de IBPP"
                                     width={50}
                                     height={50}
+                                    className="hover:scale-110 transition-transform"
                                 />
                             </a>
-                            <a className="p-3">
+                            <a href="https://www.youtube.com/@principedepazmty.1653" className="p-3 rounded-full bg-white/10 hover:bg-red-600 transition-colors shadow-lg" target="_blank" rel="noopener noreferrer" aria-label="YouTube IBPP">
                                 <Image
                                     src="/images/Youtube.svg"
                                     alt="Logo de IBPP"
                                     width={55}
                                     height={55}
+                                    className="hover:scale-110 transition-transform"
                                 />   
                             </a>      
                         </div>

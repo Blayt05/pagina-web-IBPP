@@ -60,7 +60,60 @@ export default function Ninos() {
                         
                     </div>
                 </div>
-            
+            </div>
+
+            {/* Redes Sociales Mejoradas */}
+            <div className="flex flex-col items-center pt-8 pb-20">
+                <h3 className="text-black text-lg md:text-2xl font-semibold mb-2 text-center drop-shadow">
+                    Síguenos en nuestras redes sociales y entérate de nuestras próximas reuniones
+                </h3>
+                <div className="flex gap-6 mt-3">
+                    <a
+                        href="https://www.facebook.com/IBPPMty"
+                        className="p-3 rounded-full bg-white/10 hover:bg-blue-600 transition-colors shadow-lg"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook IBPP"
+                    >
+                        <Image
+                            src="/images/Facebook.svg"
+                            alt="Facebook IBPP"
+                            width={40}
+                            height={40}
+                            className="hover:scale-110 transition-transform"
+                        />
+                    </a>
+                    <a
+                        href="https://www.instagram.com/ibppmty/"
+                        className="p-3 rounded-full bg-white/10 hover:bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500 transition-colors shadow-lg"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram IBPP"
+                    >
+                        <Image
+                            src="/images/Instagram.svg"
+                            alt="Instagram IBPP"
+                            width={40}
+                            height={40}
+                            className="hover:scale-110 transition-transform"
+                        />
+                    </a>
+                    <a
+                        href="https://www.youtube.com/@principedepazmty.1653"
+                        className="p-3 rounded-full bg-white/10 hover:bg-red-600 transition-colors shadow-lg"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="YouTube IBPP"
+                    >
+                        <Image
+                            src="/images/Youtube.svg"
+                            alt="YouTube IBPP"
+                            width={45}
+                            height={45}
+                            className="hover:scale-110 transition-transform"
+                        />
+                    </a>
+                </div>
             </div>
         
         </main>

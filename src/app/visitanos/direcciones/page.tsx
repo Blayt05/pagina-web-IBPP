@@ -7,8 +7,6 @@ export default function Visitanos() {
     const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
     const mapId = process.env.NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID;
 
-    
-
     useEffect(() => {
 
     if (document.querySelector('script[src^="https://maps.googleapis.com/maps/api/js"]')) {
