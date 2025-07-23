@@ -23,26 +23,34 @@ export default function Header() {
         "Crece",
         "Sobre IBPP"
     ]
-  
+    
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
     return (
-        <header className="w-full">
+        <header className="w-full top-0 z-50 sticky">
             <div className="w-full overflow-x-hidden bg-[#3E81AD] flex">
-                <Image 
-                    src="/images/PALOMA_LOGO_IBPP.svg" 
-                    alt="Imagen Paloma IBPP"
-                    width={85}
-                    height={150} 
-                    className="ml-7"
-                />
-
-                <Image 
-                    src="/images/IBPP_Logo_Blanco.svg" 
-                    alt="Imagen Logo IBPP"
-                    width={180}
-                    height={57.6}
-                    className="p-2 mr-10 border-r-2 border-amber-50"
-                />
-
+                <button onClick={scrollToTop} className="bg-transparent border-none p-0 m-0 cursor-pointer">
+                    <Image 
+                        src="/images/PALOMA_LOGO_IBPP.svg" 
+                        alt="Imagen Paloma IBPP"
+                        width={85}
+                        height={150} 
+                        className="ml-7"
+                    />
+                </button>
+                <button onClick={scrollToTop} className="bg-transparent border-none p-0 m-0 cursor-pointer">
+                    <Image 
+                        src="/images/IBPP_Logo_Blanco.svg" 
+                        alt="Imagen Logo IBPP"
+                        width={180}
+                        height={57.6}
+                        className="p-2 border-amber-50"
+                    />
+                </button>
+                
+                
                 {/* Menu horizontal solo en desktop */}
                 <nav className="hidden lg:flex flex-1 justify-center items-center">
                     <ul className="flex gap-8 text-[#FFFFFF]">

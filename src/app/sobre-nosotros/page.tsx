@@ -10,7 +10,7 @@ export default function SobreNosotros() {
                     alt="Imagen de Sobre Nosotros"
                     width={100}
                     height={100}
-                    className="w-full"
+                    className="w-full "
                 />
                 <div className="absolute inset-0 flex justify-center items-center ">
                     <h1 className="font-extrabold text-2xl text-center">Al servicio del mundo que <br/>nos rodea</h1>

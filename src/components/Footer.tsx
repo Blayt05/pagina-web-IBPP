@@ -9,26 +9,26 @@ export default function Footer() {
     const sections = [
         {
             title: "Mirar", 
-            link: "/mirar", 
+            link: "/paginas/mirar", 
             links: [
                 { name: "Directos en vivo", href: "/mirar/directosenvivo" },
             ]
         },
         {
             title: "Visitanos",
-            link: "/visitanos", 
+            link: "/paginas/visitanos", 
             links: [
                 { name: "Direcciones", href: "/visitanos/direcciones" },
         ]},
         {
-            title: "Conecta", 
-            link: "/conecta", 
+            title: "Conecta",   
+            link: "/paginas/conecta", 
             links: [
                 { name: "Donaciones", href: "/conecta/donaciones" },
         ]},
         {
             title: "Crece", 
-            link: "/crece", 
+            link: "/paginas/crece", 
             links: [
                 { name: "Sobre los niños", href: "/crece/sobrelosninos" },
                 { name: "Femenil", href: "/crece/femenil" },
@@ -38,7 +38,7 @@ export default function Footer() {
         ]},
         {
             title: "Sobre IBPP", 
-            link: "/sobreibpp", 
+            link: "/paginas/sobreibpp", 
             links: [
                 { name: "Nuestra Historia", href: "/sobreibpp/nuestrahistoria" },
                 { name: "Contactanos", href: "/contactanos" },

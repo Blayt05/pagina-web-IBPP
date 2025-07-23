@@ -1,9 +1,15 @@
 "use client"
+import 'aos/dist/aos.css'; // Importa los estilos de AOS
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect} from "react";
+import AOS from "aos";
 
 export default function Home() {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   const slides = [
     {
@@ -55,15 +61,16 @@ export default function Home() {
   };
 
   return (
-    <main >
+    <main id="inicio-main" >
       {/* Imagen Inicial */}
-      <div className="relative">
+      
+      <div className="relative " data-aos="fade-down" data-aos-duration="2000">
         <Image
           src="/images/Fondo IBPP 2.svg"
           alt="Fondo IBPP"
           width={1200}
           height={800}
-          className="w-full"
+          className="w-full "
         />
         
 
@@ -101,11 +108,11 @@ export default function Home() {
 
       {/* Iglesia con Vision */}
       <div className="text-center text-3xl pt-20 pb-20">
-        <h1 className="font-semibold">Una iglesia con vision</h1>
+        <h1 className="font-semibold" data-aos="fade-up" data-aos-duration="1000">Una iglesia con vision</h1>
         
         <div className="p-10 lg:flex gap-20 ">
-          <div className="pb-15 ">
-            <div className="bg-[#FFF5EB] border-[#FFD0A0] border-b-10 rounded-2xl">
+          <div className="pb-15" data-aos="fade-up" data-aos-duration="1000">
+            <div className="bg-[#FFF5EB] border-[#FFD0A0] border-b-10 rounded-2xl" >
               <div className="flex justify-center pt-5 ">
                 <Image
                   src="/images/Sobre Nosotros Icon.svg"
@@ -124,7 +131,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="pb-15">
+          <div className="pb-15" data-aos="fade-up" data-aos-duration="1000">
             <div className="bg-[#FFF5EB] border-[#FFD0A0] border-b-10 rounded-2xl">
               <div className="flex justify-center pt-5">
                 <Image
@@ -144,7 +151,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="pb-15">
+          <div className="pb-15" data-aos="fade-up" data-aos-duration="1000">
             <div className="bg-[#FFF5EB] border-[#FFD0A0] border-b-10 rounded-2xl">
               <div className="flex justify-center pt-5">
                 <Image
@@ -168,7 +175,7 @@ export default function Home() {
       </div>
 
       {/* Seccion Amor y Compasion */}
-      <div className="text-center text-3xl pt-20 pb-20">
+      <div className="text-center text-3xl pt-20 pb-20" data-aos="fade-up" data-aos-duration="1000">
         <h1 className="font-semibold">Amor y Compasion</h1>
         <p className="p-10 text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
           Quidem aliquid repellat debitis, neque delectus iure eius inventore exercitationem. 
@@ -256,8 +263,8 @@ export default function Home() {
             
         </div>
 
-
-          <h2 className="font-semibold text-3xl pt-10">Celebra con Nosotros</h2>
+        <div data-aos="fade-right" data-aos-duration="2000">
+          <h2 className="font-semibold text-3xl pt-10" >Celebra con Nosotros</h2>
           <p className="text-center text-xl pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Corrupti praesentium quas ducimus voluptates incidunt, expedita 
             et ullam distinctio aut quos quo odit, excepturi soluta totam. 
@@ -272,6 +279,7 @@ export default function Home() {
                 height={50}
               />
             </Link>
+          </div>
         </div>
       </div>
       
@@ -281,7 +289,7 @@ export default function Home() {
 
 
         <div className="lg:hidden carousel carousel-vertical rounded-box h-145">
-          <div className="carousel-item relative p-5">
+          <div className="carousel-item relative p-5" data-aos="fade-right" data-aos-duration="2000">
             <Image
               src="/images/LOGO IBPP.svg"
               alt="=Logo de IBPP"
@@ -298,7 +306,7 @@ export default function Home() {
           </div>
 
 
-          <div className="carousel-item relative p-5">
+          <div className="carousel-item relative p-5" >
             <Image
               src="/images/LOGO IBPP.svg"
               alt="=Logo de IBPP"
@@ -314,7 +322,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className=" carousel-item relative p-5">
+          <div className=" carousel-item relative p-5" >
             <Image
               src="/images/LOGO IBPP.svg"
               alt="=Logo de IBPP"
@@ -330,21 +338,21 @@ export default function Home() {
             </div>
           </div>
 
-            <div className=" carousel-item relative p-5">
-              <Image
-                src="/images/LOGO IBPP.svg"
-                alt="=Logo de IBPP"
-                width={800}
-                height={500}
-              />
-              <div className="absolute bottom-0 left-0 w-full p-5">
-                <h2 className="font-semibold text-xl">Watch and listen to our sermons</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                  Quas, temporibus. Fugit ullam assumenda possimus esse expedita,
-                  quas dignissimos in ea, facere vel repellendus qui at dolorum id repudiandae,
-                  similique cupiditate!</p>
-              </div>
+          <div className=" carousel-item relative p-5" >
+            <Image
+              src="/images/LOGO IBPP.svg"
+              alt="=Logo de IBPP"
+              width={800}
+              height={500}
+            />
+            <div className="absolute bottom-0 left-0 w-full p-5">
+              <h2 className="font-semibold text-xl">Watch and listen to our sermons</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Quas, temporibus. Fugit ullam assumenda possimus esse expedita,
+                quas dignissimos in ea, facere vel repellendus qui at dolorum id repudiandae,
+                similique cupiditate!</p>
             </div>
+          </div>
         </div>
 
         {/* Desktop */}
@@ -423,44 +431,45 @@ export default function Home() {
       <div className="p-5 ">
         <h1 className="text-center font-bold text-4xl p-10">Unetenos y se parte de algo mas grande</h1>
 
-        <div className="lg:flex flex-row-reverse">
-        <Image
-          src="/images/TEMA DEL AÑO IBPP.svg"
-          alt="Imagen del Tema del Año"
-          width={1000}
-          height={1000}
-          className="rounded-3xl"
-        />
+        
+          <div className="lg:flex flex-row-reverse" >
+            <Image
+              src="/images/TEMA DEL AÑO IBPP.svg"
+              alt="Imagen del Tema del Año"
+              width={1000}
+              height={1000}
+              className="rounded-3xl" data-aos="fade-left" data-aos-duration="2000"
+            />
 
-        <div className="p-3"></div>
-          <div className="bg-[#FFF5EB] border-[#FFD0A0] border-b-10 rounded-2xl p-5 lg:pt-20">
-            <div className=" lg:flex flex-col justify-center items-center ">
-              <p>Proximo Evento</p>
-              <h2 className="font-semibold pb-2">Mira y escucha nuestros sermones</h2>
-              <p className="lg:text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Sit porro error in optio possimus earum amet asperiores reprehenderit distinctio vel.
-              </p>
+            <div className="p-3" ></div>
+            <div className="bg-[#FFF5EB] border-[#FFD0A0] border-b-10 rounded-2xl p-5 lg:pt-20" data-aos="fade-right" data-aos-duration="2000">
+              <div className=" lg:flex flex-col justify-center items-center ">
+                <p>Proximo Evento</p>
+                <h2 className="font-semibold pb-2">Mira y escucha nuestros sermones</h2>
+                <p className="lg:text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                  Sit porro error in optio possimus earum amet asperiores reprehenderit distinctio vel.
+                </p>
 
-              <div className="flex gap-3 pt-7 lg:flex-col">
-                <Image
-                  src="/images/Clock icon.svg"
-                  alt="Imagen del Tema del Año"
-                  width={30}
-                  height={30}
-                />
-                <p>Friday 23:39 IST Saturday 11:20 ISD</p>
+                <div className="flex gap-3 pt-7 lg:flex-col">
+                  <Image
+                    src="/images/Clock icon.svg"
+                    alt="Imagen del Tema del Año"
+                    width={30}
+                    height={30}
+                  />
+                  <p>Friday 23:39 IST Saturday 11:20 ISD</p>
 
-                <Image
-                  src="/images/Ubication Icon.svg"
-                  alt="Imagen del Tema del Año"
-                  width={30}
-                  height={30}
-                />
-                <p>No 233 Main St. New York, United States</p>
-              </div>  
+                  <Image
+                    src="/images/Ubication Icon.svg"
+                    alt="Imagen del Tema del Año"
+                    width={30}
+                    height={30}
+                  />
+                  <p>No 233 Main St. New York, United States</p>
+                </div>  
+              </div>
             </div>
           </div>
-        </div>
         <div className="flex justify-center items-center pt-5 lg:justify-end lg:pr-10">
           <a>Mira todos los sermones</a>
           <Image
@@ -473,7 +482,7 @@ export default function Home() {
       </div>
 
       {/* Queremos ser de bendicion */}
-      <div className="p-5 ">
+      <div className="p-5 " data-aos="fade-up" data-aos-duration="2000">
         <div className="relative ">
           <div className="lg:hidden">
             <Image
@@ -514,7 +523,7 @@ export default function Home() {
         <h2 className="text-center font-bold text-4xl pb-10">Compartir, inspirar y innovar</h2>
         
         <div
-          className="flex overflow-x-auto gap-4 snap-x snap-mandatory pb-4 scroll-smooth"
+          className=" flex overflow-x-auto gap-4 snap-x snap-mandatory pb-4 scroll-smooth"
           ref={carouselRef}
           onScroll={handleScroll}
           style={{ scrollSnapType: "x mandatory" }}
