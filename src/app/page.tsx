@@ -1,9 +1,9 @@
 "use client"
-import 'aos/dist/aos.css'; // Importa los estilos de AOS
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useRef, useEffect} from "react";
-import AOS from "aos";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Importa los estilos de AOS
 
 export default function Home() {
 

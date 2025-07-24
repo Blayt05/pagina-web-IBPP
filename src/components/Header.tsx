@@ -159,19 +159,19 @@ export default function Header() {
                                 let href = "#";
                                 switch (link) {
                                     case "Visitanos":
-                                        href = "/visitanos";
+                                        href = "/paginas/visitanos";
                                         break;
                                     case "Mirar":
-                                        href = "/mirar";
+                                        href = "/paginas/mirar";
                                         break;
                                     case "Conecta":
-                                        href = "/conecta";
+                                        href = "/paginas/conecta";
                                         break;
                                     case "Crece":
-                                        href = "/crece";
+                                        href = "/paginas/crece";
                                         break;
                                     case "Sobre IBPP":
-                                        href = "/sobreibpp";
+                                        href = "/paginas/sobreibpp";
                                         break;
                                     default:
                                         href = "#";
@@ -200,11 +200,11 @@ export default function Header() {
             <div className="hidden lg:block bg-blue-300">
                 <nav className="flex justify-center">
                     <ul className="flex gap-8 p-2">
-                        <li><a href="#" className="hover:text-amber-300">Visitanos</a></li>
-                        <li><a href="#" className="hover:text-amber-300">Mirar</a></li>
-                        <li><a href="#" className="hover:text-amber-300">Conecta</a></li>
-                        <li><a href="#" className="hover:text-amber-300">Crece</a></li>
-                        <li><a href="#" className="hover:text-amber-300">Sobre IBPP</a></li>
+                        <li><a href="/paginas/visitanos" className="hover:text-amber-300">Visitanos</a></li>
+                        <li><a href="/paginas/mirar" className="hover:text-amber-300">Mirar</a></li>
+                        <li><a href="/paginas/conecta" className="hover:text-amber-300">Conecta</a></li>
+                        <li><a href="/paginas/crece" className="hover:text-amber-300">Crece</a></li>
+                        <li><a href="/paginas/sobreibpp" className="hover:text-amber-300">Sobre IBPP</a></li>
                     </ul>
                 </nav>
             </div>   
