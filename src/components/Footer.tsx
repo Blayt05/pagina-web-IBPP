@@ -12,11 +12,12 @@ export default function Footer() {
             link: "/paginas/mirar", 
             links: [
                 { name: "Directos en vivo", href: "/mirar/directosenvivo" },
+                { name: "Podcast", href: "/mirar/podcast" },
             ]
         },
         {
             title: "Visitanos",
-            link: "/paginas/visitanos", 
+            link: "/visitanos/direcciones", 
             links: [
                 { name: "Direcciones", href: "/visitanos/direcciones" },
         ]},
@@ -42,7 +43,6 @@ export default function Footer() {
             links: [
                 { name: "Nuestra Historia", href: "/sobreibpp/nuestrahistoria" },
                 { name: "Contactanos", href: "/contactanos" },
-                { name: "Podcast", href: "/sobreibpp/podcast" },
                 { name: "Politicas de Privacidad", href: "/sobreibpp/politicasdeprivacidad" },
                 { name: "Terminos de Uso", href: "/sobreibpp/terminosdeuso" }
         ]}

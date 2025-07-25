@@ -58,12 +58,12 @@ export default function Header() {
                         <li><Link href="/sobre-nosotros" className="hover:text-amber-300">Sobre Nosotros</Link></li>
                         <li><Link href="/sermones" className="hover:text-amber-300">Sermones</Link></li>
                         <li><Link href="/blog" className="hover:text-amber-300">Blog</Link></li>
-                        <li><a href="#" className="hover:text-amber-300">Tienda</a></li>
-                        <li><a href="#" className="hover:text-amber-300">Inicio de Sesion</a></li>
+                        <li><Link href="/tienda" className="hover:text-amber-300">Tienda</Link></li>
+                        <li><Link href="/iniciodesesion" className="hover:text-amber-300">Inicio de Sesion</Link></li>
                         <li>
-                            <a href="/contactanos" className="ml-8 text-[#000000] bg-[#FFD2A4] rounded-full px-5 py-3 hover:bg-[#816f5e] transition">
+                            <Link href="/contactanos" className="ml-8 text-[#000000] bg-[#FFD2A4] rounded-full px-5 py-3 hover:bg-[#816f5e] transition">
                                 Contactanos
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </nav>
@@ -115,7 +115,7 @@ export default function Header() {
                                         href = "/tienda";
                                         break;
                                     case "Inicio de Sesion":
-                                        href = "/login";
+                                        href = "/iniciodesesion";
                                         break;
                                     default:
                                         href = "#";
@@ -159,7 +159,7 @@ export default function Header() {
                                 let href = "#";
                                 switch (link) {
                                     case "Visitanos":
-                                        href = "/paginas/visitanos";
+                                        href = "/visitanos/direcciones";
                                         break;
                                     case "Mirar":
                                         href = "/paginas/mirar";
@@ -200,11 +200,11 @@ export default function Header() {
             <div className="hidden lg:block bg-blue-300">
                 <nav className="flex justify-center">
                     <ul className="flex gap-8 p-2">
-                        <li><a href="/paginas/visitanos" className="hover:text-amber-300">Visitanos</a></li>
-                        <li><a href="/paginas/mirar" className="hover:text-amber-300">Mirar</a></li>
-                        <li><a href="/paginas/conecta" className="hover:text-amber-300">Conecta</a></li>
-                        <li><a href="/paginas/crece" className="hover:text-amber-300">Crece</a></li>
-                        <li><a href="/paginas/sobreibpp" className="hover:text-amber-300">Sobre IBPP</a></li>
+                        <li><Link href="/visitanos/direcciones" className="hover:text-amber-300">Visitanos</Link></li>
+                        <li><Link href="/paginas/mirar" className="hover:text-amber-300">Mirar</Link></li>
+                        <li><Link href="/paginas/conecta" className="hover:text-amber-300">Conecta</Link></li>
+                        <li><Link href="/paginas/crece" className="hover:text-amber-300">Crece</Link></li>
+                        <li><Link href="/paginas/sobreibpp" className="hover:text-amber-300">Sobre IBPP</Link></li>
                     </ul>
                 </nav>
             </div>   

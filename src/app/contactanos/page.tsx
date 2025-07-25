@@ -7,7 +7,7 @@ export default function Contactanos() {
         <main>
             <div className="relative">
                 <Image
-                    src="images/ContactoImage.svg"
+                    src="images/contactoImage.svg"
                     alt="Imagen de Contacto"
                     width={100}
                     height={100}

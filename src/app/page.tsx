@@ -108,10 +108,10 @@ export default function Home() {
 
       {/* Iglesia con Vision */}
       <div className="text-center text-3xl pt-20 pb-20">
-        <h1 className="font-semibold" data-aos="fade-up" data-aos-duration="1000">Una iglesia con vision</h1>
+        <h1 className="font-semibold" data-aos="fade-up" data-aos-duration="2000">Una iglesia con vision</h1>
         
         <div className="p-10 lg:flex gap-20 ">
-          <div className="pb-15" data-aos="fade-up" data-aos-duration="1000">
+          <div className="pb-15" data-aos="fade-right" data-aos-duration="2000">
             <div className="bg-[#FFF5EB] border-[#FFD0A0] border-b-10 rounded-2xl" >
               <div className="flex justify-center pt-5 ">
                 <Image
@@ -131,7 +131,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="pb-15" data-aos="fade-up" data-aos-duration="1000">
+          <div className="pb-15" data-aos="fade-up" data-aos-duration="2000">
             <div className="bg-[#FFF5EB] border-[#FFD0A0] border-b-10 rounded-2xl">
               <div className="flex justify-center pt-5">
                 <Image
@@ -151,7 +151,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="pb-15" data-aos="fade-up" data-aos-duration="1000">
+          <div className="pb-15" data-aos="fade-left" data-aos-duration="2000">
             <div className="bg-[#FFF5EB] border-[#FFD0A0] border-b-10 rounded-2xl">
               <div className="flex justify-center pt-5">
                 <Image
@@ -228,9 +228,9 @@ export default function Home() {
         </div>
         
         {/* Diseño en Desktop */}
-        <div className="hidden lg:flex justify-center lg:gap-10 ">
+        <div className="hidden lg:flex justify-center lg:gap-10 " >
           
-          <div className="rounded-4xl ">
+          <div className="rounded-4xl " data-aos="fade-right" data-aos-duration="2000">
             <Image
               src="/images/Chicas Orando IBPP 2.svg"
               alt="Imagen de Chicas IBPP"
@@ -240,7 +240,7 @@ export default function Home() {
             />
           </div>
           
-          <div className=" pt-20 ">
+          <div className=" pt-20 " data-aos="fade-up" data-aos-duration="3000">
             <Image
               src="/images/Pastor IBPP 1.svg"
               alt="Imagen de Pastor"
@@ -250,7 +250,7 @@ export default function Home() {
             />
           </div>
           
-          <div className="">
+          <div className="" data-aos="fade-left" data-aos-duration="2000">
             <Image
               src="/images/Hermanos Orando IBPP 1.svg"
               alt="Imagen de Chicas IBPP"
@@ -357,7 +357,7 @@ export default function Home() {
 
         {/* Desktop */}
 
-        <div className="hidden lg:flex ">
+        <div className="hidden lg:flex " data-aos="fade-right" data-aos-duration="2000">
           <div className="relative p-5">
             <Image
               src="/images/LOGO IBPP.svg"

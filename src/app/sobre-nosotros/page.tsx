@@ -3,8 +3,8 @@ import Image from "next/image"
 
 export default function SobreNosotros() {
     return (
-        <main id="sobre-nosotros">
-            <div className="relative">
+        <main id="sobre-nosotros" >
+            <div className="relative" data-aos="fade-down" data-aos-duration="2000">
                 <Image
                     src="/images/SobreNosotrosImage.svg"
                     alt="Imagen de Sobre Nosotros"
@@ -18,7 +18,7 @@ export default function SobreNosotros() {
             </div>
 
             {/* Seccion de Amor y Compasion */}
-            <div className="text-center text-3xl pt-20 pb-20">
+            <div className="text-center text-3xl pt-20 pb-20" data-aos="fade-up" data-aos-duration="2000">
                 <h1 className="font-semibold">Amor y Compasion</h1>
                 <p className="p-10 text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Quidem aliquid repellat debitis, neque delectus iure eius inventore exercitationem. 
@@ -27,44 +27,44 @@ export default function SobreNosotros() {
                 
                 <div className=" carousel w-full lg:hidden ">
                     <div id="slide1" className="carousel-item relative w-full flex flex-col items-center">
-                    <Image
-                        src="/images/Pastor IBPP 1.svg"
-                        alt="Imagen de Pastor"
-                        width={500}
-                        height={500}
-                        className="rounded-4xl pb-3"
-                    />
-                    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        <a href="#slide3" className="btn btn-circle">❮</a>
-                        <a href="#slide2" className="btn btn-circle">❯</a>
-                    </div>
+                        <Image
+                            src="/images/Pastor IBPP 1.svg"
+                            alt="Imagen de Pastor"
+                            width={500}
+                            height={500}
+                            className="rounded-4xl pb-3"
+                        />
+                        <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                            <a href="#slide3" className="btn btn-circle">❮</a>
+                            <a href="#slide2" className="btn btn-circle">❯</a>
+                        </div>
                     </div>
                     
                     <div id="slide2" className="carousel-item relative w-full flex flex-col items-center">
-                    <Image
-                        src="/images/Chicas Orando IBPP 2.svg"
-                        alt="Imagen de Chicas IBPP"
-                        width={500}
-                        height={500}
-                        className="rounded-4xl pb-3"
-                    />
-                    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        <a href="#slide1" className="btn btn-circle">❮</a>
-                        <a href="#slide3" className="btn btn-circle">❯</a>
-                    </div>
+                        <Image
+                            src="/images/Chicas Orando IBPP 2.svg"
+                            alt="Imagen de Chicas IBPP"
+                            width={500}
+                            height={500}
+                            className="rounded-4xl pb-3"
+                        />
+                        <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                            <a href="#slide1" className="btn btn-circle">❮</a>
+                            <a href="#slide3" className="btn btn-circle">❯</a>
+                        </div>
                     </div>
                     <div id="slide3" className="carousel-item relative w-full flex flex-col items-center">
-                    <Image
-                        src="/images/Hermanos Orando IBPP 1.svg"
-                        alt="Imagen de Chicas IBPP"
-                        width={500}
-                        height={500}
-                        className="rounded-4xl pb-3"
-                    />
-                    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        <a href="#slide2" className="btn btn-circle">❮</a>
-                        <a href="#slide1" className="btn btn-circle">❯</a>
-                    </div>
+                        <Image
+                            src="/images/Hermanos Orando IBPP 1.svg"
+                            alt="Imagen de Chicas IBPP"
+                            width={500}
+                            height={500}
+                            className="rounded-4xl pb-3"
+                        />
+                        <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                            <a href="#slide2" className="btn btn-circle">❮</a>
+                            <a href="#slide1" className="btn btn-circle">❯</a>
+                        </div>
                     </div>
                     
                 </div>
@@ -72,7 +72,7 @@ export default function SobreNosotros() {
                 {/* Diseño en Desktop */}
                 <div className="hidden lg:flex justify-center lg:gap-10 ">
                     
-                    <div className="rounded-4xl ">
+                    <div className="rounded-4xl " data-aos="fade-right" data-aos-duration="2000">
                         <Image
                             src="/images/Chicas Orando IBPP 2.svg"
                             alt="Imagen de Chicas IBPP"
@@ -82,7 +82,7 @@ export default function SobreNosotros() {
                         />
                     </div>
                     
-                    <div className=" pt-20 ">
+                    <div className=" pt-20 " data-aos="fade-up" data-aos-duration="3000">
                         <Image
                             src="/images/Pastor IBPP 1.svg"
                             alt="Imagen de Pastor"
@@ -92,7 +92,7 @@ export default function SobreNosotros() {
                         />
                     </div>
                     
-                    <div className="">
+                    <div className="" data-aos="fade-left" data-aos-duration="2000">
                         <Image
                             src="/images/Hermanos Orando IBPP 1.svg"
                             alt="Imagen de Chicas IBPP"
@@ -105,7 +105,7 @@ export default function SobreNosotros() {
             </div>
             
             {/* Seccion de Mision, Vision y Que hacemos */}
-            <div className="lg:flex gap-5 ">
+            <div className="lg:flex gap-5 " data-aos="fade-up" data-aos-duration="2000">
                 <div className="pb-15 text-center p-10 pt-1">
                     <div className="bg-[#FFF5EB] border-[#FFD0A0] border-b-10 rounded-2xl ">
                         <div className="flex justify-center pt-5">
@@ -150,10 +150,10 @@ export default function SobreNosotros() {
             </div>
 
             {/* Lo que Creemos */}
-            <h2 className="text-center text-3xl font-bold pt-20">Lo que creemos</h2> 
+            <h2 className="text-center text-3xl font-bold pt-20" data-aos="fade-up" data-aos-duration="2000">Lo que creemos</h2> 
             <div className="space-y-20 px-10 lg:px-20 pt-10">
                 {/* Fila 1 */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center lg:pr-20 lg:pl-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center lg:pr-20 lg:pl-20" data-aos="fade-right" data-aos-duration="2000">
                     <div className="text-center">
                         <h3 className="font-bold uppercase">Biblia</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -171,7 +171,7 @@ export default function SobreNosotros() {
                 </div>
 
                 {/* Fila 2 */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center lg:pr-20 lg:pl-20">  
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center lg:pr-20 lg:pl-20" data-aos="fade-left" data-aos-duration="2000">  
                     <div className="md:order-2 flex flex-col justify-center items-center text-center">
                         <h3 className="font-bold uppercase">Trinidad</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -190,7 +190,7 @@ export default function SobreNosotros() {
 
 
                 {/* Fila 3 */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center lg:pr-20 lg:pl-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center lg:pr-20 lg:pl-20" data-aos="fade-right" data-aos-duration="2000">
                     <div className="text-center">
                         <h3 className="font-bold uppercase">Salvacion</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -208,7 +208,7 @@ export default function SobreNosotros() {
                 </div>
 
                 {/* Fila 4 */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center lg:pr-20 lg:pl-20">  
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center lg:pr-20 lg:pl-20" data-aos="fade-left" data-aos-duration="2000">  
                     <div className="md:order-2 flex flex-col justify-center items-center text-center">
                         <h3 className="font-bold uppercase">Relacion con Dios</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -227,7 +227,7 @@ export default function SobreNosotros() {
             </div>
 
             {/* Conoce a nuestro Equipo Inspiracional */}
-            <div className="pt-30 pb-20">
+            <div className="pt-30 pb-20" data-aos="fade-up" data-aos-duration="2000">
                 <h2 className=" text-2xl text-center font-bold pb-10">Conoce a nuestro Equipo Inspiracional</h2>
 
                 <div className="flex flex-col justify-center items-center gap-10 md:flex-row">
