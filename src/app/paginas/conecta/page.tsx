@@ -17,16 +17,16 @@ export default function PaginaConecta() {
             </div>
 
             <div>
-                <h1 className=" text-center text-2xl  pb-5 pt-10 bg-amber-200 m-5 rounded-2xl ">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat accusantium aliquid, 
-                    eius voluptates labore eos et modi beatae dolor placeat nulla nisi totam laboriosam! In 
-                    sapiente necessitatibus sed excepturi cumque!
-                </h1>
+                <div className="flex justify-center items-center">
+                    <h1 className=" text-center text-2xl bg-amber-200 p-3 m-3 rounded-2xl ">
+                        Sigamos creciendo y ayudando a los que nos rodean
+                    </h1>
+                </div>
         
 
                 
 
-                <div className="lg:hidden carousel carousel-vertical rounded-box h-145">
+                <div className="lg:hidden carousel carousel-vertical rounded-box h-145 carousel-item flex-col ">
         
                     <a href="/conecta/donaciones">
                         <div className="carousel-item flex-col p-5" data-aos="fade-right" data-aos-duration="2000">
@@ -45,7 +45,7 @@ export default function PaginaConecta() {
         
                 {/* Desktop */}
         
-                <div className="hidden lg:flex justify-center items-center pb-10 " data-aos="fade-right" data-aos-duration="2000">
+                <div className="hidden lg:flex justify-center items-center pb-10carousel-item transition-transform duration-300 hover:scale-110 " data-aos="fade-right" data-aos-duration="2000">
                     
                     <a href="/conecta/donaciones">
                         <div className=" p-5">

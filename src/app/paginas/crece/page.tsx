@@ -17,18 +17,18 @@ export default function PaginaCrece() {
             </div>
 
             <div>
-                <h1 className=" text-center text-2xl  pb-5 pt-10 bg-amber-200 m-5 rounded-2xl ">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat accusantium aliquid, 
-                    eius voluptates labore eos et modi beatae dolor placeat nulla nisi totam laboriosam! In 
-                    sapiente necessitatibus sed excepturi cumque!
-                </h1>
+                <div className="flex justify-center items-center">
+                    <h1 className=" text-center text-2xl bg-amber-200 p-3 m-3 rounded-2xl ">
+                        Unetenos a nuestras actividades grupales
+                    </h1>
+                </div>
         
 
                 
 
                 <div className="lg:hidden carousel carousel-vertical rounded-box h-145">
                     <a href="/crece/sobrelosninos">
-                        <div className="carousel-item flex-col p-5" data-aos="fade-right" data-aos-duration="2000">
+                        <div className="carousel-item flex-col p-5 transition-transform duration-300 hover:scale-105" data-aos="fade-right" data-aos-duration="2000">
                                 <Image
                                     src="/images/Ninos.svg"
                                     alt="=Logo de IBPP"
@@ -41,7 +41,7 @@ export default function PaginaCrece() {
         
         
                     <a href="/crece/femenil">
-                        <div className="carousel-item flex-col  p-5" data-aos="fade-right" data-aos-duration="2000">
+                        <div className="carousel-item flex-col p-5 transition-transform duration-300 hover:scale-105" data-aos="fade-right" data-aos-duration="2000">
                                 <Image
                                     src="/images/Femenil.svg"
                                     alt="=Logo de IBPP"
@@ -53,7 +53,7 @@ export default function PaginaCrece() {
                     </a>
 
                     <a href="/crece/varonil">
-                        <div className="carousel-item flex-col  p-5" data-aos="fade-right" data-aos-duration="2000">
+                        <div className="carousel-item flex-col p-5 transition-transform duration-300 hover:scale-105" data-aos="fade-right" data-aos-duration="2000">
                                 <Image
                                     src="/images/Varonil.svg"
                                     alt="=Logo de IBPP"
@@ -65,7 +65,7 @@ export default function PaginaCrece() {
                     </a>
 
                     <a href="/crece/jovenes">
-                        <div className="carousel-item flex-col  p-5" data-aos="fade-right" data-aos-duration="2000">
+                        <div className="carousel-item flex-col p-5 transition-transform duration-300 hover:scale-105" data-aos="fade-right" data-aos-duration="2000">
                                 <Image
                                     src="/images/Jovenes.svg"
                                     alt="=Logo de IBPP"
@@ -77,7 +77,7 @@ export default function PaginaCrece() {
                     </a>
 
                     <a href="/crece/clasesyeventos">
-                        <div className="carousel-item flex-col  p-5" data-aos="fade-right" data-aos-duration="2000">
+                        <div className="carousel-item flex-col p-5 transition-transform duration-300 hover:scale-105" data-aos="fade-right" data-aos-duration="2000">
                                 <Image
                                     src="/images/Clases.svg"
                                     alt="=Logo de IBPP"
@@ -95,7 +95,7 @@ export default function PaginaCrece() {
                 <div className="hidden lg:flex justify-center items-center pb-10 " data-aos="fade-right" data-aos-duration="2000">
 
                     <a href="/crece/sobrelosninos">
-                        <div className="  p-5">
+                        <div className=" p-5 transition-transform duration-300 hover:scale-105">
                             <Image
                                 src="/images/Ninos.svg"
                                 alt="=Logo de IBPP"
@@ -108,7 +108,7 @@ export default function PaginaCrece() {
                     </a>
                     
                     <a href="/crece/femenil">
-                        <div className="  p-5">
+                        <div className="  p-5 transition-transform duration-300 hover:scale-105">
                             <Image
                                 src="/images/Femenil.svg"
                                 alt="=Logo de IBPP"
@@ -121,7 +121,7 @@ export default function PaginaCrece() {
                     </a>
 
                     <a href="/crece/varonil">
-                        <div className="  p-5">
+                        <div className="  p-5 transition-transform duration-300 hover:scale-105">
                             <Image
                                 src="/images/Varonil.svg"
                                 alt="=Logo de IBPP"
@@ -134,7 +134,7 @@ export default function PaginaCrece() {
                     </a>
 
                     <a href="/crece/jovenes">
-                        <div className="  p-5">
+                        <div className=" p-5 transition-transform duration-300 hover:scale-105">
                             <Image
                                 src="/images/Jovenes.svg"
                                 alt="=Logo de IBPP"
@@ -147,7 +147,7 @@ export default function PaginaCrece() {
                     </a>
 
                     <a href="/crece/clasesyeventos">
-                        <div className="  p-5">
+                        <div className=" p-5 transition-transform duration-300 hover:scale-105">
                             <Image
                                 src="/images/Clases.svg"
                                 alt="=Logo de IBPP"
