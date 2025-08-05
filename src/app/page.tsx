@@ -73,37 +73,6 @@ export default function Home() {
           className="w-full "
         />
         
-
-        <div className="lg:hidden absolute inset-0 flex flex-col justify-start items-end pr-8 pt-3 ">
-          <div className="relative">
-            <h1 className="text-white text-2xl font-semibold ">
-              Se parte de nuestra <br/> comunidad
-            </h1>
-          </div>
-
-          <div className="absolute inset-0 flex flex-row justify-end items-start pt-10 pr-5 ">
-            <button className="bg-amber-400 rounded-full p-1 "> 
-              Aprende Mas
-            </button>
-          </div> 
-        </div>
-
-        {/* Desktop */}
-        <div className="hidden lg:flex justify-center lg:gap-10">
-          <div className=" absolute inset-0 flex flex-col justify-start items-end lg:pr-76 pt-30">
-            <div className="relative">
-              <h1 className="text-white text-2xl font-semibold lg:text-6xl">
-                Se parte de nuestra <br/> comunidad
-              </h1>
-            </div>
-
-            <div className="absolute inset-0 flex flex-row justify-end items-start  lg:pr-85 pt-45">
-              <button className="bg-amber-400 rounded-full lg: p-4 pl-10 pr-10"> 
-                Aprende Mas
-              </button>
-            </div> 
-          </div>
-        </div>
       </div>
 
       {/* Iglesia con Vision */}
