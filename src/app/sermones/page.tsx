@@ -35,7 +35,7 @@ export default function Sermones() {
 
     return (
         <main>
-            <div className="relative" data-aos="fade-down" data-aos-duration="2000">
+            <div className="relative" >
                 <Image
                     src="/images/SermonesImage.svg"
                     alt="Sermones Imagen de fondo "

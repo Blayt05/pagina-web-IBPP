@@ -13,7 +13,7 @@ export default function Header() {
         "Sermones",
         "Blog",
         "Tienda",
-        "Inicio de Sesion"
+        "Contactanos"
     ]
     
     const mobileLinks2 = [
@@ -31,24 +31,27 @@ export default function Header() {
     return (
         <header className="w-full top-0 z-50 sticky">
             <div className="w-full overflow-x-hidden bg-[#3E81AD] flex">
-                <button onClick={scrollToTop} className="bg-transparent border-none p-0 m-0 cursor-pointer">
-                    <Image 
-                        src="/images/PALOMA_LOGO_IBPP.svg" 
-                        alt="Imagen Paloma IBPP"
-                        width={85}
-                        height={150} 
-                        className="ml-7"
-                    />
-                </button>
-                <button onClick={scrollToTop} className="bg-transparent border-none p-0 m-0 cursor-pointer">
-                    <Image 
-                        src="/images/IBPP_Logo_Blanco.svg" 
-                        alt="Imagen Logo IBPP"
-                        width={180}
-                        height={57.6}
-                        className="p-2 border-amber-50"
-                    />
-                </button>
+                <Link href="/">
+                    <button onClick={scrollToTop} className="bg-transparent border-none p-0 m-0 cursor-pointer">
+                        <Image 
+                            src="/images/PALOMA_LOGO_IBPP.svg" 
+                            alt="Imagen Paloma IBPP"
+                            width={85}
+                            height={150} 
+                            className="ml-7"
+                        />
+                    </button>
+                    <button onClick={scrollToTop} className="bg-transparent border-none p-0 m-0 cursor-pointer">
+                        <Image 
+                            src="/images/IBPP_Logo_Blanco.svg" 
+                            alt="Imagen Logo IBPP"
+                            width={180}
+                            height={57.6}
+                            className="p-2 border-amber-50"
+                        />
+                    </button>
+                </Link>
+                
                 
                 
                 {/* Menu horizontal solo en desktop */}
@@ -90,11 +93,12 @@ export default function Header() {
             {/* Menu desplegable */}
             {opened && ( 
                 <div 
-                    className={` lg:hidden mx-auto mt-4 max-w-xs rounded-xl bg-white shadow-lg ring-1 ring-gray-200 transition-all duration-300 ease-out ${
-                            opened ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-4 pointer-events-none"
-                    }`}
+                    className={`fixed top-23 left-1/2 -translate-x-1/2 z-50 lg:hidden w-full rounded-xl bg-white shadow-lg ring-1 ring-gray-200 transition-all duration-300 ease-out
+                    ${opened ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-4 pointer-events-none"}
+                    `}
                 >
-                    <nav>
+                    <nav className="">
+
                         <ul className="flex flex-col items-center gap-2 py-4">
                             {mobileLinks.map(link => {
                                 let href = "#";
@@ -114,8 +118,8 @@ export default function Header() {
                                     case "Tienda":
                                         href = "/tienda";
                                         break;
-                                    case "Inicio de Sesion":
-                                        href = "/iniciodesesion";
+                                    case "Contactanos":
+                                        href = "/contactanos";
                                         break;
                                     default:
                                         href = "#";
@@ -136,25 +140,26 @@ export default function Header() {
                                 );
                             })}
                         </ul>
-                        <hr className="my-2 border-gray-200" />
+                        <hr className="my-2 border-gray-400" />
                         <ul className="flex flex-col items-center gap-2 py-2">
                             <li>
 
                                 <Link 
-                                    href="/contactanos" 
-                                    onClick={() => setActiveMobile("Contactanos")}
+                                    href="/iniciodesesion" 
+                                    onClick={() => setActiveMobile("IniciodeSesion")}
                                     className={`block w-full rounded-lg px-6 py-2 text-lg font-semibold transition
-                                        ${activeMobile === "Contactanos"
+                                        ${activeMobile === "IniciodeSesion"
                                             ? "bg-amber-200 text-cyan-700"
                                             : "text-cyan-500 hover:bg-amber-200"}
                                     `} 
                                 >
-                                    Contactanos
+                                    Login
                                 </Link>
                             </li>
                         </ul>
-                        <hr className="my-2 border-gray-200" />
+                        <hr className="my-2 border-gray-300" />
                         <ul className="flex flex-col items-center gap-2 py-2">
+                            
                             {mobileLinks2.map(link => {
                                 let href = "#";
                                 switch (link) {
@@ -178,9 +183,11 @@ export default function Header() {
                                 }
                                 return (
                                     <li key={link}>
+                                        
                                         <Link
                                             href={href}
                                             onClick={() => setActiveMobile(link)}
+                                            
                                             className={`block w-full rounded-lg px-6 py-2 text-lg font-semibold text-gray-700 transition
                                                 hover:bg-amber-100 hover:text-amber-600 
                                                 ${activeMobile === link ? "bg-amber-100 text-amber-700" : ""}                                            

@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export default function SobreNosotros() {
     return (
-        <main id="sobre-nosotros" >
+        <main id="sobre-nosotros" className="overflow-x-hidden overflow-y-hidden">
             <div className="relative" data-aos="fade-down" data-aos-duration="2000">
                 <Image
                     src="/images/SobreNosotrosImage.svg"

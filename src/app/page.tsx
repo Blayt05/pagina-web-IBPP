@@ -61,7 +61,7 @@ export default function Home() {
   };
 
   return (
-    <main id="inicio-main" >
+    <main id="inicio-main" className="overflow-x-hidden overflow-y-hidden">
       {/* Imagen Inicial */}
       
       <div className="relative " data-aos="fade-down" data-aos-duration="2000">
