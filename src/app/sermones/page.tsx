@@ -35,7 +35,7 @@ export default function Sermones() {
 
     return (
         <main>
-            <div className="relative" >
+            <div className="relative">
                 <Image
                     src="/images/SermonesImage.svg"
                     alt="Sermones Imagen de fondo "
@@ -49,7 +49,7 @@ export default function Sermones() {
                 </div>
             </div>
 
-            <div className="p-5 " data-aos="fade-right" data-aos-duration="2000">
+            <div className="p-5 " >
                 <h1 className="text-center font-bold text-4xl p-10">Unetenos y se parte de algo mas grande</h1>
         
                 <div className="lg:flex flex-row-reverse">
@@ -90,20 +90,11 @@ export default function Sermones() {
                     </div>
                     </div>
                 </div>
-                <div className="flex justify-center items-center pt-5 lg:justify-end lg:pr-10">
-                    <a>Mira todos los sermones</a>
-                    <Image
-                    src="images/arrow-forward.svg"
-                    alt="Imagen de Flecha"
-                    width={50}
-                    height={50}
-                    />
-                </div>
             </div>
 
             {/* Eventos Proximos */}
 
-            <div className="p-10 flex flex-col justify-center items-center" data-aos="fade-up" data-aos-duration="2000">
+            <div className="p-10 flex flex-col justify-center items-center" >
                 <h2 className="text-center font-bold text-4xl pb-10">Mira todos los eventos que tenemos como Iglesia </h2>
                 <a className=" bg-[#FFD0A0] hover:bg-[#FFC285] text-[#7C4700] font-bold py-3 px-5 rounded-full shadow-lg transition duration-200"
                     href="/crece/clasesyeventos"

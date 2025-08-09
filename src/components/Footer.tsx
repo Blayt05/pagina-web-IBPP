@@ -48,6 +48,10 @@ export default function Footer() {
         ]}
     ];
 
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
     return (
         <footer className="w-full mt-auto">
             <div className="bg-[rgb(59,116,208)] ">
@@ -55,14 +59,16 @@ export default function Footer() {
                 <div className="lg:hidden">
 
                     {/* Dispositivos Moviles  */}
+                    
                     <div className=" flex flex-col pb-5 justify-center items-center p-5">
-                        <Image
-                            src="/images/IBPP_Logo_Blanco.svg"
-                            alt="Logo de IBPP"
-                            width={150}
-                            height={100}
-                        />
-
+                            <button onClick={scrollToTop} className="bg-transparent border-none p-0 m-0 cursor-pointer">
+                                <Image
+                                    src="/images/IBPP_Logo_Blanco.svg"
+                                    alt="Logo de IBPP"
+                                    width={150}
+                                    height={100}
+                                />
+                            </button>
                         
                         {/* Redes Sociales */}
                         <div className="flex justify-start items-center gap-5 pt-5">
@@ -96,6 +102,7 @@ export default function Footer() {
                             </a>      
                         </div>
                     </div>
+                    
 
                     {/* Secciones */}
                     <div className="flex flex-col divide-y divide-white">
@@ -143,12 +150,14 @@ export default function Footer() {
                 <div className="hidden lg:grid grid-cols-6 gap-4 p-8">
                     <div className="col-span-1 p-5">
                         <div className="flex justify-center items-center">
-                            <Image
-                                src="/images/IBPP_Logo_Blanco.svg"
-                                alt="Logo de IBPP"
-                                width={150}
-                                height={100}
-                            />
+                                <button onClick={scrollToTop} className="bg-transparent border-none p-0 m-0 cursor-pointer">
+                                    <Image
+                                        src="/images/IBPP_Logo_Blanco.svg"
+                                        alt="Logo de IBPP"
+                                        width={150}
+                                        height={100}
+                                    />
+                                </button>
                         </div>
                         
 
@@ -191,7 +200,7 @@ export default function Footer() {
 
                     {/* Seccion de MIRAR */}
                     <div className="col-span-1 p-5">
-                        <Link href={sections[0].link} className="font-semibold text-xl">
+                        <Link href={sections[0].link} className="font-semibold text-xl hover:text-amber-200 transition-colors">
                             {sections[0].title}
                         </Link>
                         <ul >
@@ -208,7 +217,7 @@ export default function Footer() {
                         
                         {/* Seccion de VISITANOS */}
                         <div className="pt-15">
-                            <Link href={sections[1].link} className="font-semibold text-xl">
+                            <Link href={sections[1].link} className="font-semibold text-xl hover:text-amber-200 transition-colors">
                                 {sections[1].title}
                             </Link>
 
@@ -229,7 +238,7 @@ export default function Footer() {
 
                      {/* Seccion de CONECTA */}
                     <div className="col-span-1 p-5">
-                        <Link href={sections[2].link} className="font-semibold text-xl">
+                        <Link href={sections[2].link} className="font-semibold text-xl hover:text-amber-200 transition-colors">
                             {sections[2].title}
                         </Link>
 
@@ -247,7 +256,7 @@ export default function Footer() {
 
                      {/* Seccion de CRECE */}
                     <div className="col-span-1 p-5">
-                        <Link href={sections[3].link} className="font-semibold text-xl">
+                        <Link href={sections[3].link} className="font-semibold text-xl hover:text-amber-200 transition-colors">
                             {sections[3].title}
                         </Link>
 
@@ -265,7 +274,7 @@ export default function Footer() {
 
                      {/* Seccion de SOBRE IBPP */}
                     <div className="col-span-1 p-5">
-                        <Link href={sections[4].link} className="font-semibold text-xl ">
+                        <Link href={sections[4].link} className="font-semibold text-xl hover:text-amber-200 transition-colors">
                             {sections[4].title}
                         </Link>
 

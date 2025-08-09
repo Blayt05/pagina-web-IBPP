@@ -68,7 +68,7 @@ export default function Home() {
         <Image
           src="/images/Fondo IBPP 2.svg"
           alt="Fondo IBPP"
-          width={1200}
+          width={1500}
           height={800}
           className="w-full "
         />
@@ -80,9 +80,9 @@ export default function Home() {
         <h1 className="font-semibold" data-aos="fade-up" data-aos-duration="2000">Una iglesia con vision</h1>
         
         <div className="p-10 lg:flex gap-20 ">
-          <div className="pb-15" data-aos="fade-right" data-aos-duration="2000">
+          <div className="pb-15  transition-transform duration-300 hover:scale-105" data-aos="fade-right" data-aos-duration="2000">
             <div className="bg-[#FFF5EB] border-[#FFD0A0] border-b-10 rounded-2xl" >
-              <div className="flex justify-center pt-5 ">
+              <div className="flex justify-center pt-5">
                 <Image
                   src="/images/Sobre Nosotros Icon.svg"
                   alt=" Icono de Aportar"
@@ -100,7 +100,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="pb-15" data-aos="fade-up" data-aos-duration="2000">
+          <div className="pb-15  transition-transform duration-300 hover:scale-105" data-aos="fade-up" data-aos-duration="2000">
             <div className="bg-[#FFF5EB] border-[#FFD0A0] border-b-10 rounded-2xl">
               <div className="flex justify-center pt-5">
                 <Image
@@ -120,7 +120,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="pb-15" data-aos="fade-left" data-aos-duration="2000">
+          <div className="pb-15  transition-transform duration-300 hover:scale-105" data-aos="fade-left" data-aos-duration="2000">
             <div className="bg-[#FFF5EB] border-[#FFD0A0] border-b-10 rounded-2xl">
               <div className="flex justify-center pt-5">
                 <Image
@@ -258,7 +258,7 @@ export default function Home() {
 
 
         <div className="lg:hidden carousel carousel-vertical rounded-box h-145">
-          <div className="carousel-item relative p-5" data-aos="fade-right" data-aos-duration="2000">
+          <div className="carousel-item relative p-5 " data-aos="fade-right" data-aos-duration="2000">
             <Image
               src="/images/LOGO IBPP.svg"
               alt="=Logo de IBPP"
@@ -327,7 +327,7 @@ export default function Home() {
         {/* Desktop */}
 
         <div className="hidden lg:flex " data-aos="fade-right" data-aos-duration="2000">
-          <div className="relative p-5">
+          <div className="relative p-5 transition-transform duration-300 hover:scale-105">
             <Image
               src="/images/LOGO IBPP.svg"
               alt="=Logo de IBPP"
@@ -344,7 +344,7 @@ export default function Home() {
           </div>
 
 
-          <div className="relative p-5">
+          <div className="relative p-5 transition-transform duration-300 hover:scale-105">
             <Image
               src="/images/LOGO IBPP.svg"
               alt="=Logo de IBPP"
@@ -360,7 +360,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className=" relative p-5">
+          <div className=" relative p-5 transition-transform duration-300 hover:scale-105">
             <Image
               src="/images/LOGO IBPP.svg"
               alt="=Logo de IBPP"
@@ -376,7 +376,7 @@ export default function Home() {
             </div>
           </div>
 
-            <div className=" relative p-5">
+            <div className=" relative p-5 transition-transform duration-300 hover:scale-105">
               <Image
                 src="/images/LOGO IBPP.svg"
                 alt="=Logo de IBPP"
@@ -439,15 +439,15 @@ export default function Home() {
               </div>
             </div>
           </div>
-        <div className="flex justify-center items-center pt-5 lg:justify-end lg:pr-10">
-          <a>Mira todos los sermones</a>
-          <Image
-            src="images/arrow-forward.svg"
-            alt="Imagen de Flecha"
-            width={50}
-            height={50}
-          />
-        </div>
+          
+          <a href="https://www.facebook.com/IBPPMty"  className="flex justify-center items-center pt-5 lg:justify-end lg:pr-10 underline hover:text-amber-200 transition-colors">Mira todos los sermones
+            <Image
+              src="images/arrow-forward.svg"
+              alt="Imagen de Flecha"
+              width={50}
+              height={50}
+            />
+          </a>
       </div>
 
       {/* Queremos ser de bendicion */}
@@ -478,9 +478,11 @@ export default function Home() {
                 Dolore, voluptatem aut! Beatae sit fugit rem necessitatibus.
               </p>
 
-              <button className="bg-[#FFD0A0] p-3 rounded-2xl">
-                Visitanos
-              </button>
+              <Link href="/visitanos/direcciones">
+                <button className="bg-[#FFD0A0] p-3 rounded-2xl hover:bg-amber-300 transition-colors">
+                  Visitanos
+                </button>
+              </Link>
             </div>
           </div>
         </div>
