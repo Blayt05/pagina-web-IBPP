@@ -94,17 +94,15 @@ export default function DirectosEnVivo() {
             </div>
 
             <div className="flex justify-center items-center p-5">
-                <div
-                    className="fb-page "
-                    data-href="https://www.facebook.com/IBPPMty"
-                    data-tabs="live"
-                    data-width="2000"
-                    data-height="2300"
-                    data-small-header="false"
-                    data-adapt-container-width="true"
-                    data-hide-cover="false"
-                    data-show-facepile="true"
-                    >    
+                <div style={{ borderRadius: '12px', overflow: 'hidden', width: '100%', maxWidth: '800px' }}>
+                    <iframe
+                        src="https://www.youtube.com/embed/live_stream?channel=UCSfeNc39AyoKVWNuG5R4jGw"
+                        width="100%"
+                        height="450"
+                        frameBorder="0"
+                        allow="autoplay; encrypted-media"
+                        allowFullScreen
+                    ></iframe>
                 </div>
             </div>
 
