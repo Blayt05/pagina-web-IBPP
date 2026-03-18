@@ -4,8 +4,10 @@ import Link from "next/link";
 import { useState, useRef, useEffect} from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Importa los estilos de AOS
+import gsap from "gsap";
 
 export default function Home() {
+  const heroTextRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     AOS.init();
@@ -60,19 +62,81 @@ export default function Home() {
     }
   };
 
+  useEffect(() => {
+  AOS.init();
+
+  const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".hero-line",
+        { y: 30, opacity: 0 },
+        {
+          x: 10,
+          opacity: 1,
+          duration: 0.9,
+          stagger: 0.18,
+          ease: "power3.out",
+          delay: 0.2,
+        }
+      );
+
+      gsap.fromTo(
+        ".hero-cta",
+        { y: 20, opacity: 0 },
+        {
+          y: 0,
+          x: 10,
+          opacity: 1,
+          duration: 0.8,
+          ease: "power2.out",
+          delay: 0.9,
+        }
+      );
+    }, heroTextRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <main id="inicio-main" className="overflow-x-hidden overflow-y-hidden">
       {/* Imagen Inicial */}
-      
-      <div className="relative " data-aos="fade-down" data-aos-duration="2000">
-        <Image
-          src="/images/Fondo IBPP 2.svg"
-          alt="Fondo IBPP"
-          width={1500}
-          height={800}
-          className="w-full "
-        />
-        
+      <div className="relative h-screen w-full p-4">
+        <div className="relative h-full w-full overflow-hidden rounded-3xl border border-white/30 shadow-2xl">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 h-full w-full object-cover object-center z-0"
+          >
+            <source src="/videos/video.mp4" type="video/mp4" />
+          </video>
+
+          <div className="absolute inset-0 bg-black/40 z-10" />
+
+          <div className="absolute inset-0 z-20 flex items-center">
+            <div
+              ref={heroTextRef}
+              className="w-full max-w-xl px-6 md:px-12 lg:px-16"
+            >
+              <h1 className="hero-line text-6xl md:text-7xl font-bold text-white leading-tight">
+                For God.
+              </h1>
+              <h1 className="hero-line text-6xl md:text-7xl font-bold text-white leading-tight">
+                For People.
+              </h1>
+              <h1 className="hero-line text-6xl md:text-7xl font-bold text-white leading-tight">
+                For the City.
+              </h1>
+              <p className="hero-line mt-6  text-3xl md:text-7xl text-gray-200 max-w-md">
+                Welcome to a place where the gospel is central...
+              </p>
+              <button className="hero-cta mt-8 bg-cyan-500 px-8 py-3 rounded-full text-white">
+                Learn More
+              </button>
+            </div>
+          </div>
+          
+        </div>
       </div>
 
       {/* Iglesia con Vision */}
